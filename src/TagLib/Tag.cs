@@ -901,6 +901,22 @@ namespace TagLib {
 			set {}
 		}
 		
+
+        ////##### dbPoweramp specific tags #####/////
+        string notImplemented = "Not Implemented";
+        public virtual string ISRC
+        {
+            get { return notImplemented; }
+            set {}
+        }
+
+        public virtual string MBId
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+
 		/// <summary>
 		///    Gets and sets the same value as <see cref="Performers"
 		///    />.

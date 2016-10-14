@@ -1324,6 +1324,18 @@ namespace TagLib.Ogg
 			}
 		}
 
+        public override string MBId
+        {
+            get { return GetFirstField("MBID"); }
+            set { SetField("MBID", value); }
+        }
+
+        public override string ISRC
+        {
+            get { return GetFirstField("ISRC"); }
+            set { SetField("ISRC", value); }
+        }
+
 		/// <summary>
 		///    Gets whether or not the current instance is empty.
 		/// </summary>
