@@ -1324,6 +1324,85 @@ namespace TagLib.Ogg
 			}
 		}
 
+        public override string MBId
+        {
+            get { return GetFirstField("MBID"); }
+            set { SetField("MBID", value); }
+        }
+
+        public override string ISRC
+        {
+            get { return GetFirstField("ISRC"); }
+            set { SetField("ISRC", value); }
+        }
+
+        public override string CDTOC
+        {
+            get { return GetFirstField("CDTOC"); }
+            set { SetField("CDTOC", value); }
+        }
+
+        public override string CatalogNumber
+        {
+            get { return GetFirstField("CATALOGNUMBER"); }
+            set { SetField("CATALOGNUMBER", value); }
+        }
+
+        public override string BatchId
+        {
+            get { return GetFirstField("BATCHID"); }
+            set { SetField("BATCHID", value); }
+        }
+
+        public override string BatchDiskNumber
+        {
+            get { return GetFirstField("BATCHDISCNUMBER"); }
+            set { SetField("BATCHDISCNUMBER", value); }
+        }
+
+        public override string CDDBDiskId
+        {
+            get { return GetFirstField("CDDB DISC ID"); }
+            set { SetField("CDDB DISC ID", value); }
+        }
+
+        public override string MetaProvider
+        {
+            get { return GetFirstField("METAPROVIDER"); }
+            set { SetField("METAPROVIDER", value); }
+        }
+        public override string AccurateRipDiskId
+        {
+            get { return GetFirstField("ACCURATERIPDISCID"); }
+            set { SetField("ACCURATERIPDISCID", value); }
+        }
+
+        public override string AccurateRipDiskResults
+        {
+            get { return GetFirstField("ACCURATERIPRESULT"); }
+            set { SetField("ACCURATERIPRESULT", value); }
+        }
+
+        public override string Encoder
+        {
+            get { return GetFirstField("ENCODER"); }
+            set { SetField("ENCODER", value); }
+        }
+
+        public override string EncoderSettings
+        {
+            get { return GetFirstField("ENCODER SETTINGS"); }
+            set { SetField("ENCODER SETTINGS", value); }
+        }
+
+        public override string Label
+        {
+            get { return GetFirstField("LABEL"); }
+            set { SetField("LABEL", value); }
+        }
+
+
+
 		/// <summary>
 		///    Gets whether or not the current instance is empty.
 		/// </summary>

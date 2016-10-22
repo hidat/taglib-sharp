@@ -901,6 +901,93 @@ namespace TagLib {
 			set {}
 		}
 		
+
+        ////##### dbPoweramp specific tags #####/////
+        string notImplemented = "Not Implemented";
+        public virtual string ISRC
+        {
+            get { return notImplemented; }
+            set {}
+        }
+
+        public virtual string MBId
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string CDTOC
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string CatalogNumber
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string BatchId
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string BatchDiskNumber
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string CDDBDiskId
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string MetaProvider
+        {
+            get { return notImplemented; }
+            set { }
+        }
+        public virtual string AccurateRipDiskId
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string AccurateRipDiskResults
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string Encoder
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string EncoderSettings
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        public virtual string Label
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+
+
+
+
+
+
+
 		/// <summary>
 		///    Gets and sets the same value as <see cref="Performers"
 		///    />.
