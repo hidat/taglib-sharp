@@ -1629,6 +1629,402 @@ namespace TagLib {
 			}
 		}
 
+
+        ////##### dbPoweramp specific tags #####/////
+
+        /// <summary>
+        /// Gets and sets the ISRC code associated with this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string ISRC
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.ISRC;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.ISRC = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the MusicBrainz Release ID  associated with this track.
+        /// This is equivalent to the Picard MusicBrainzReleaseId
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string MBId
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.MBId;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.MBId = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the CD Table of Contents for the CD that this tracks was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string CDTOC
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.CDTOC;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.CDTOC = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the Catalog Number of the CD that this tracks was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string CatalogNumber
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.CatalogNumber;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.CatalogNumber = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the Batch ID assigned in the dbPoweramp Batch Ripper when this CD was ripped.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string BatchId
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.BatchId;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.BatchId = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the Batch Disk # assigned in dbPoweramp Batch Ripper when this CD was ripped.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string BatchDiskNumber
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.BatchDiskNumber;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.BatchDiskNumber = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the calculated CDDB Disk ID of the CD that this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string CDDBDiskId
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.CDDBDiskId;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.CDDBDiskId = value;
+            }
+       }
+
+        /// <summary>
+        /// Gets and sets the Metadata Provider that was used to identify this CD/Tracks
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string MetaProvider
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.MetaProvider;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.MetaProvider = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the dbPoweramp AccurateRip Disk ID for the CD this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string AccurateRipDiskId
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.AccurateRipDiskId;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.AccurateRipDiskId = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the dbPoweramp AccurateRip Results for the CD this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string AccurateRipDiskResults
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.AccurateRipDiskResults;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.AccurateRipDiskResults = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the encoder that was used to encode this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string Encoder
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.Encoder;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.Encoder = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the encoder settings that were used to encode this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string EncoderSettings
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.EncoderSettings;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.EncoderSettings = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the Label associated with this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
+        public override string Label
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.Label;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.Label = value;
+            }
+        }
+
+
+
 		/// <summary>
 		///    Gets whether or not the current instance is empty.
 		/// </summary>

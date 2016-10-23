@@ -10,7 +10,7 @@ namespace FileReaderTest
     {
         static void Main(string[] args)
         {
-            var filename = @"C:\Music\Robot\47 - Up to Here\01 - Blow at High Dough.flac";
+            var filename = @"E:\music\flac\Let's Eat Grandma\I, Gemini\03 Let's Eat Grandma - Sax In The City.flac";
             var f = TagLib.File.Create(filename);
             var tags = f.Tag;
             Console.Write("Read: {0}", tags.Title);

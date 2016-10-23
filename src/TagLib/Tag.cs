@@ -904,86 +904,137 @@ namespace TagLib {
 
         ////##### dbPoweramp specific tags #####/////
         string notImplemented = "Not Implemented";
+
+        /// <summary>
+        /// Gets and sets the ISRC code associated with this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string ISRC
         {
             get { return notImplemented; }
             set {}
         }
 
+        /// <summary>
+        /// Gets and sets the MusicBrainz Release ID  associated with this track.
+        /// This is equivalent to the Picard MusicBrainzReleaseId
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string MBId
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the CD Table of Contents for the CD that this tracks was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string CDTOC
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the Catalog Number of the CD that this tracks was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string CatalogNumber
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the Batch ID assigned in the dbPoweramp Batch Ripper when this CD was ripped.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string BatchId
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the Batch Disk # assigned in dbPoweramp Batch Ripper when this CD was ripped.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string BatchDiskNumber
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the calculated CDDB Disk ID of the CD that this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string CDDBDiskId
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the Metadata Provider that was used to identify this CD/Tracks
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string MetaProvider
         {
             get { return notImplemented; }
             set { }
         }
+
+        /// <summary>
+        /// Gets and sets the dbPoweramp AccurateRip Disk ID for the CD this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string AccurateRipDiskId
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the dbPoweramp AccurateRip Results for the CD this track was ripped from.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string AccurateRipDiskResults
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the encoder that was used to encode this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string Encoder
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the encoder settings that were used to encode this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string EncoderSettings
         {
             get { return notImplemented; }
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the Label associated with this track.
+        /// This tag is dbPoweramp specific.
+        /// </summary>
         public virtual string Label
         {
             get { return notImplemented; }
             set { }
         }
-
-
-
-
 
 
 
