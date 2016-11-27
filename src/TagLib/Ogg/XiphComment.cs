@@ -1336,6 +1336,8 @@ namespace TagLib.Ogg
             set { SetField("ISRC", value); }
         }
 
+        ////##### dbPoweramp specific tags #####/////
+
         public override string CDTOC
         {
             get { return GetFirstField("CDTOC"); }
@@ -1401,7 +1403,14 @@ namespace TagLib.Ogg
             set { SetField("LABEL", value); }
         }
 
+        ////##### end dbPoweramp specific tags #####/////
 
+        ////##### tags from TomatoBanana ####////
+        public override string FileUnder
+        {
+            get { return GetFirstField("FILE UNDER"); }
+            set { SetField("FILE UNDER", value); }
+        }
 
 		/// <summary>
 		///    Gets whether or not the current instance is empty.

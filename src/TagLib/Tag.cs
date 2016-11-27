@@ -1036,7 +1036,15 @@ namespace TagLib {
             set { }
         }
 
-
+        /// <summary>
+        /// Gets and sets the File Under value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string FileUnder
+        {
+            get { return notImplemented; }
+            set { }
+        }
 
 
 		/// <summary>

@@ -2023,6 +2023,36 @@ namespace TagLib {
             }
         }
 
+        /// <summary>
+        /// Gets and sets the FileUnder value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public override string FileUnder
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.FileUnder;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.FileUnder = value;
+            }
+        }
+
 
 
 		/// <summary>
