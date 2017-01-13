@@ -1412,14 +1412,22 @@ namespace TagLib.Ogg
             set { SetField("FILE UNDER", value); }
         }
 
-		/// <summary>
-		///    Gets whether or not the current instance is empty.
-		/// </summary>
-		/// <value>
-		///    <see langword="true" /> if the current instance does not
-		///    any values. Otherwise <see langword="false" />.
-		/// </value>
-		public override bool IsEmpty {
+        public override string SetSequenceNumber
+        {
+            get { return GetFirstField("GEN SEQUENCE NUM"); }
+            set { SetField("GEN SEQUENCE NUM", value); }
+        }
+
+        ////##### end TomatoBanana specific tags #####/////
+
+        /// <summary>
+        ///    Gets whether or not the current instance is empty.
+        /// </summary>
+        /// <value>
+        ///    <see langword="true" /> if the current instance does not
+        ///    any values. Otherwise <see langword="false" />.
+        /// </value>
+        public override bool IsEmpty {
 			get {
 				foreach (string [] values in field_list.Values)
 					if (values.Length != 0)

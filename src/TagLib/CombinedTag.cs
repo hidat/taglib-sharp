@@ -2053,17 +2053,47 @@ namespace TagLib {
             }
         }
 
+        /// <summary>
+        /// Gets and sets the SetSequenceNumber value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public override string SetSequenceNumber
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.SetSequenceNumber;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.SetSequenceNumber = value;
+            }
+        }
 
 
-		/// <summary>
-		///    Gets whether or not the current instance is empty.
-		/// </summary>
-		/// <value>
-		///    <see langword="true" /> if all the child tags are empty.
-		///    Otherwise <see langword="false" />.
-		/// </value>
-		/// <seealso cref="Tag.IsEmpty" />
-		public override bool IsEmpty {
+
+        /// <summary>
+        ///    Gets whether or not the current instance is empty.
+        /// </summary>
+        /// <value>
+        ///    <see langword="true" /> if all the child tags are empty.
+        ///    Otherwise <see langword="false" />.
+        /// </value>
+        /// <seealso cref="Tag.IsEmpty" />
+        public override bool IsEmpty {
 			get {
 				foreach (Tag tag in tags)
 					if (tag.IsEmpty)

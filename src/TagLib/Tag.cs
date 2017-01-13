@@ -1046,6 +1046,15 @@ namespace TagLib {
             set { }
         }
 
+        /// <summary>
+        /// Gets and sets the 'Set Sequence Number' value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string SetSequenceNumber
+        {
+            get { return notImplemented; }
+            set { }
+        }
 
 		/// <summary>
 		///    Gets and sets the same value as <see cref="Performers"
