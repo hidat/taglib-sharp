@@ -1662,6 +1662,25 @@ namespace TagLib {
             }
         }
 
+        public override Dictionary<string, string> SendTo
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    var value = tag.SendTo;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+        }
+
         /// <summary>
         /// Gets and sets the MusicBrainz Release ID  associated with this track.
         /// This is equivalent to the Picard MusicBrainzReleaseId
@@ -2054,10 +2073,10 @@ namespace TagLib {
         }
 
         /// <summary>
-        /// Gets and sets the SetSequenceNumber value associated with this track.
+        /// Gets and sets the UPC value associated with this track.
         /// This tag is TomatoBanana specific.
         /// </summary>
-        public override string SetSequenceNumber
+        public override string UPC
         {
             get
             {
@@ -2066,7 +2085,7 @@ namespace TagLib {
                     if (tag == null)
                         continue;
 
-                    string value = tag.SetSequenceNumber;
+                    string value = tag.UPC;
 
                     if (value != null)
                         return value;
@@ -2079,10 +2098,121 @@ namespace TagLib {
             {
                 foreach (Tag tag in tags)
                     if (tag != null)
-                        tag.SetSequenceNumber = value;
+                        tag.UPC = value;
             }
         }
 
+        /// <summary>
+        /// Gets and sets the FCCRating value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public override string FCCRating
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.FCCRating;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.FCCRating = value;
+            }
+        }
+
+        public override string RadioEdit
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.RadioEdit;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.RadioEdit = value;
+            }
+        }
+
+        public override string Style
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.Style;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.Style = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the RotationStatus value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public override string RotationStatus
+        {
+            get
+            {
+                foreach (Tag tag in tags)
+                {
+                    if (tag == null)
+                        continue;
+
+                    string value = tag.RotationStatus;
+
+                    if (value != null)
+                        return value;
+                }
+
+                return null;
+            }
+
+            set
+            {
+                foreach (Tag tag in tags)
+                    if (tag != null)
+                        tag.RotationStatus = value;
+            }
+        }
 
 
         /// <summary>

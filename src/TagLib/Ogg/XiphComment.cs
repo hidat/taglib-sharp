@@ -1412,10 +1412,59 @@ namespace TagLib.Ogg
             set { SetField("FILE UNDER", value); }
         }
 
-        public override string SetSequenceNumber
+        public override Dictionary<string,string> SendTo
         {
-            get { return GetFirstField("GEN SEQUENCE NUM"); }
-            set { SetField("GEN SEQUENCE NUM", value); }
+            get
+            {
+                var sets = new Dictionary<string, string>();
+                foreach (KeyValuePair<string, string[]> entry in field_list)
+                {
+                    if (entry.Key.StartsWith("SENDTO"))
+                    {
+                        if (entry.Value.Length > 0)
+                        {
+                            var k = entry.Key.Substring(7);
+                            var v = entry.Value[0];
+                            sets.Add(k, v);
+                        }
+                    }
+                }
+                if (sets.Count == 0)
+                {
+                    return null;
+                }
+                return sets;
+            }
+        }
+
+        public override string UPC
+        {
+            get { return GetFirstField("UPC"); }
+            set { SetField("UPC", value); }
+        }
+
+        public override string FCCRating
+        {
+            get { return GetFirstField("FCC RATING"); }
+            set { SetField("FCC RATING", value); }
+        }
+
+        public override string RadioEdit
+        {
+            get { return GetFirstField("RADIO EDIT"); }
+            set { SetField("RADIO EDIT", value); }
+        }
+
+        public override string Style
+        {
+            get { return GetFirstField("STYLE"); }
+            set { SetField("STYLE", value); }
+        }
+
+        public override string RotationStatus
+        {
+            get { return GetFirstField("ROTATION STATUS"); }
+            set { SetField("ROTATION STATUS", value); }
         }
 
         ////##### end TomatoBanana specific tags #####/////

@@ -27,6 +27,8 @@
 //
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace TagLib {
 	/// <summary>
@@ -903,7 +905,7 @@ namespace TagLib {
 		
 
         ////##### dbPoweramp specific tags #####/////
-        string notImplemented = "Not Implemented";
+        string notImplemented = null;
 
         /// <summary>
         /// Gets and sets the ISRC code associated with this track.
@@ -913,6 +915,11 @@ namespace TagLib {
         {
             get { return notImplemented; }
             set {}
+        }
+
+        public virtual Dictionary<string, string> SendTo
+        {
+            get { return null; }
         }
 
         /// <summary>
@@ -1047,28 +1054,69 @@ namespace TagLib {
         }
 
         /// <summary>
-        /// Gets and sets the 'Set Sequence Number' value associated with this track.
+        /// Gets and sets the 'UPC' value associated with this track.
         /// This tag is TomatoBanana specific.
         /// </summary>
-        public virtual string SetSequenceNumber
+        public virtual string UPC
         {
             get { return notImplemented; }
             set { }
         }
 
-		/// <summary>
-		///    Gets and sets the same value as <see cref="Performers"
-		///    />.
-		/// </summary>
-		/// <value>
-		///    The same value as <see cref="Performers" />.
-		/// </value>
-		/// <remarks>
-		///    This property exists to aleviate confusion. Use <see
-		///    cref="Performers" /> for track artists and <see
-		///    cref="AlbumArtists" /> for album artists.
-		/// </remarks>
-		[Obsolete("For album artists use AlbumArtists. For track artists, use Performers")]
+        /// <summary>
+        /// Gets and sets the 'FCC Rating' value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string FCCRating
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets and sets the 'Radio Edit' value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string RadioEdit
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets and sets the 'Style' value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string Style
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets and sets the 'Rotation Status' value associated with this track.
+        /// This tag is TomatoBanana specific.
+        /// </summary>
+        public virtual string RotationStatus
+        {
+            get { return notImplemented; }
+            set { }
+        }
+
+
+        /// <summary>
+        ///    Gets and sets the same value as <see cref="Performers"
+        ///    />.
+        /// </summary>
+        /// <value>
+        ///    The same value as <see cref="Performers" />.
+        /// </value>
+        /// <remarks>
+        ///    This property exists to aleviate confusion. Use <see
+        ///    cref="Performers" /> for track artists and <see
+        ///    cref="AlbumArtists" /> for album artists.
+        /// </remarks>
+        [Obsolete("For album artists use AlbumArtists. For track artists, use Performers")]
 		public virtual string [] Artists {
 			get {return Performers;}
 			set {Performers = value;}
