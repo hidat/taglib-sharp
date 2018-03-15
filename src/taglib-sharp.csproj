@@ -17,7 +17,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>True</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>.</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,6 +25,7 @@
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <AssemblyOriginatorKeyFile>..\taglib-sharp.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -81,8 +82,8 @@
     <Compile Include="TagLib\Asf\UnknownObject.cs" />
     <Compile Include="TagLib\Audible\File.cs" />
     <Compile Include="TagLib\Audible\Tag.cs" />
-	<Compile Include="TagLib\Dsf\File.cs" />
-	<Compile Include="TagLib\Dsf\StreamHeader.cs" />
+    <Compile Include="TagLib\Dsf\File.cs" />
+    <Compile Include="TagLib\Dsf\StreamHeader.cs" />
     <Compile Include="TagLib\Flac\Block.cs" />
     <Compile Include="TagLib\Flac\BlockHeader.cs" />
     <Compile Include="TagLib\Flac\File.cs" />
@@ -280,9 +281,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="TagLib\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="TagLib\TagLib.sources" />
   </ItemGroup>

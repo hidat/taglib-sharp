@@ -29,3 +29,5 @@ tests/*.dll
 tests/*.xml
 test-results
 .*.swp
+/src/taglib-sharp.pdb
+/FileReaderTest/FileReaderTest.csproj.user
