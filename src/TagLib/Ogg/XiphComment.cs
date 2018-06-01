@@ -1346,7 +1346,14 @@ namespace TagLib.Ogg
 
         public override string CatalogNumber
         {
-            get { return GetFirstField("CATALOGNUMBER"); }
+            get {
+                string catalogNum = GetFirstField("CATALOGNUMBER");
+                if (String.IsNullOrEmpty(catalogNum))
+                {
+                    catalogNum = GetFirstField("CATALOG #");
+                }
+                return catalogNum;
+            }
             set { SetField("CATALOGNUMBER", value); }
         }
 
