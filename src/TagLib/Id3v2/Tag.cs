@@ -2057,21 +2057,58 @@ namespace TagLib.Id3v2 {
 				}
 			}
 		}
-		
-		/// <summary>
-		///    Gets and sets a collection of pictures associated with
-		///    the media represented by the current instance.
-		/// </summary>
-		/// <value>
-		///    A <see cref="IPicture[]" /> containing a collection of
-		///    pictures associated with the media represented by the
-		///    current instance or an empty array if none are present.
-		/// </value>
-		/// <remarks>
-		///    This property is implemented using the "APIC" Attached
-		///    Picture Frame.
-		/// </remarks>
-		public override IPicture [] Pictures {
+
+        /// <summary>
+        ///    Gets and sets the the Label for the current instance. 
+        ///    We use the 'Publisher' frame for this - seems to be the gernally accepted tag, and it is what dbPowerAmp uses.
+        /// </summary>
+        /// <value>
+        ///    A <see cref="string" /> object containing the label name of
+        ///    the media represented by the current instance or <see
+        ///    langword="null" /> if no value is present.
+        /// </value>
+        /// <remarks>
+        ///    This property is implemented using the "TPUB" Text
+        ///    Information Frame.
+        /// </remarks>
+        public override string Label
+        {
+            get { return GetTextAsString(FrameType.TPUB); }
+            set { SetTextFrame(FrameType.TPUB, value); }
+        }
+
+        /// <summary>
+        ///    Gets and sets the the ISRC code for the current instance. 
+        /// </summary>
+        /// <value>
+        ///    A <see cref="string" /> object containing the ISRC Code of
+        ///    the media represented by the current instance or <see
+        ///    langword="null" /> if no value is present.
+        /// </value>
+        /// <remarks>
+        ///    This property is implemented using the "TSRC" Text
+        ///    Information Frame.
+        /// </remarks>
+        public override string ISRC
+        {
+            get { return GetTextAsString(FrameType.TSRC); }
+            set { SetTextFrame(FrameType.TSRC, value); }
+        }
+
+        /// <summary>
+        ///    Gets and sets a collection of pictures associated with
+        ///    the media represented by the current instance.
+        /// </summary>
+        /// <value>
+        ///    A <see cref="IPicture[]" /> containing a collection of
+        ///    pictures associated with the media represented by the
+        ///    current instance or an empty array if none are present.
+        /// </value>
+        /// <remarks>
+        ///    This property is implemented using the "APIC" Attached
+        ///    Picture Frame.
+        /// </remarks>
+        public override IPicture [] Pictures {
 			get {
 				return new List<AttachedPictureFrame> (
 					GetFrames <AttachedPictureFrame> (

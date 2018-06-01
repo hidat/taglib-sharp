@@ -81,5 +81,7 @@ namespace TagLib.Id3v2 {
 		public static readonly ReadOnlyByteVector UFID = "UFID";
 		public static readonly ReadOnlyByteVector USER = "USER";
 		public static readonly ReadOnlyByteVector USLT = "USLT";
-	}
+        public static readonly ReadOnlyByteVector TPUB = "TPUB";
+        public static readonly ReadOnlyByteVector TSRC = "TSRC";
+    }
 }
